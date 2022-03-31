@@ -1,7 +1,7 @@
 import React from "react";
 import "./login.scss";
 import { GoogleLogin } from "react-google-login";
-import googleLogo from "../../assets/google.png";
+import googleLogo from "google.png";
 import { SHA256 } from "crypto-js";
 import { Login as apiLogin } from "../_services/api";
 import Cookies from 'universal-cookie';
