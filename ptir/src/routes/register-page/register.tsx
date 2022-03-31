@@ -58,7 +58,7 @@ class Register extends React.Component<{ history: any, t: any }, IAccountInfoSta
         }
       });
     } else {
-      console.log("Password incorrect");
+      console.log("password is different");
     }
     console.log(this.state);
     event.preventDefault();

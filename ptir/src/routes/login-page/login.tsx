@@ -66,11 +66,11 @@ class Login extends React.Component<{ history: any, t: any, cookies: any }, IAcc
       apiLogin(email, passwordHash.toString())
         .then((response) => {
           if (this.state.remember) {
-            cookies.set("UHomeToken", response.data.token, {
+            cookies.set("GreenMarketToken", response.data.token, {
               maxAge: 2147483647
             })
           } else {
-            cookies.set("UHomeToken", response.data.token)
+            cookies.set("GreenMarketToken", response.data.token)
           }
           resolve(true);
         })
