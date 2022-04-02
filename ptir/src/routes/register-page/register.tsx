@@ -1,5 +1,5 @@
 import React from "react";
-import "./register.scss";
+import "./register.css";
 import { GoogleLogin } from "react-google-login";
 import googleLogo from "../../assets/google.png";
 import { SHA256 } from "crypto-js";

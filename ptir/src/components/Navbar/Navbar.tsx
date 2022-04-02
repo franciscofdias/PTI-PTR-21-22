@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Navbar.scss";
+import "./Navbar.css";
 import { useTranslation } from "react-i18next";
 import LanguageChanger from '../Language-Changer/Language-Changer'
 

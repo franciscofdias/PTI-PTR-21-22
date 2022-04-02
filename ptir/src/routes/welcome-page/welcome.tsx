@@ -1,5 +1,5 @@
 import React from "react";
-import "./welcome.scss";
+import "./welcome.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Search from "../../assets/svgs/search.svg";
