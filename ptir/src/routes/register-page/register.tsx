@@ -1,7 +1,7 @@
 import React from "react";
 import "./register.css";
 import { GoogleLogin } from "react-google-login";
-import googleLogo from "../../assets/google.png";
+import googleLogo from "../assets/google.png";
 import { SHA256 } from "crypto-js";
 import { SignUp as apiSignUp } from "../../_services/api";
 import { Link } from "react-router-dom";
