@@ -1,7 +1,6 @@
 import React from "react";
 import "./login.css";
 import { GoogleLogin } from "react-google-login";
-import googleLogo from "../../assets/google.png";
 import { SHA256 } from "crypto-js";
 import { Login as apiLogin } from "../../_services/api";
 import { Link } from "react-router-dom";
@@ -148,7 +147,7 @@ class Login extends React.Component<{ history: any, t: any, cookies: any }, IAcc
               >
                 <img
                   className="w-12 h-12 mx-auto"
-                  src={googleLogo}
+                  src="../../assets/google.png"
                   alt="Sign in with Google"
                 />
               </button>

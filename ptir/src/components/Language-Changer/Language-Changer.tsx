@@ -18,15 +18,15 @@ export default function LanguageChanger() {
   function changeLanguage(e: any) {
     i18next.changeLanguage(e.value)
     let nLang = e.value === 'pt' ? 0 : 1 
-    removeCookie("lang")
-    setCookie("lang", nLang)
+    cookies.remove("lang")
+    cookies.set("lang", nLang)
   }
 
   function initiateLanguage() {
     let nLang = cookies.get("lang")
     console.log(nLang)
     if(nLang === undefined) {
-      setCookie("lang", 0)
+      cookies.set("lang", 0)
     } else {
       nLang = parseInt(nLang)
       let lang = nLang === 0 ? 'pt' : 'en'
