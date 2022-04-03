@@ -2,7 +2,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import { Cookies } from 'react-cookie';
 
-const dev = 'http://localhost:8000';
+const dev = 'http://localhost:3000';
 const web = 'https://ptir.pt';
 const cookies = new Cookies();
 
