@@ -2,12 +2,12 @@ import React from "react";
 import "./login.css";
 import { GoogleLogin } from "react-google-login";
 import { SHA256 } from "crypto-js";
-import { Login as apiLogin } from "../../_services/api";
+import { Login as apiLogin } from "../../_services/api.ts";
 import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import { compose } from 'redux'
 import { withCookies } from "react-cookie";
-
+import googleLogo from "../../assets/google.png";
 interface IAccountInfoState {
   email: string;
   password: string;
@@ -147,8 +147,10 @@ class Login extends React.Component<{ history: any, t: any, cookies: any }, IAcc
               >
                 <img
                   className="w-12 h-12 mx-auto"
-                  src="../../assets/google.png"
+                  src={googleLogo}
                   alt="Sign in with Google"
+                  height={"12px"}
+                  width={"12px"}
                 />
               </button>
             )}

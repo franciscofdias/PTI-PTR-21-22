@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
-import LanguageChanger from '../Language-Changer/Language-Changer'
+import LanguageChanger from '../Language-Changer/Language-Changer.tsx'
 
 
 export default function Navbar() {
@@ -9,8 +9,8 @@ export default function Navbar() {
   const { t } = useTranslation();
   
   return (
-    <div>
-      <body className="antialiased bg-gray-200">
+    
+      <div className="antialiased bg-gray-200">
         <header className="lg:px-16 px-6 bg-salmon flex flex-wrap items-center lg:py-0 py-2">
           <div className="flex-1 flex justify-between items-center">
             <Link to="/">COLOCAR LOGO</Link>
@@ -69,7 +69,6 @@ export default function Navbar() {
             <LanguageChanger/>
           </div>
         </header>
-      </body>
-    </div>
+      </div>
   );
 }

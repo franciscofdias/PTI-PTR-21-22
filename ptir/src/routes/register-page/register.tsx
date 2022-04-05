@@ -2,9 +2,10 @@ import React from "react";
 import "./register.css";
 import { GoogleLogin } from "react-google-login";
 import { SHA256 } from "crypto-js";
-import { SignUp as apiSignUp } from "../../_services/api";
+import { SignUp as apiSignUp } from "../../_services/api.ts";
 import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
+import googleLogo from "../../assets/google.png";
 
 interface IAccountInfoState {
   username: string;
@@ -135,7 +136,7 @@ class Register extends React.Component<{ history: any, t: any }, IAccountInfoSta
                   value="Student"
                   onChange={this.handleChange}
                 />
-                <span className="ml-2 text-white">Student</span>
+                <span className="ml-2 text-white">User</span>
               </label>
               <label className="inline-flex items-center ml-6">
                 <input
@@ -145,7 +146,7 @@ class Register extends React.Component<{ history: any, t: any }, IAccountInfoSta
                   value="Host"
                   onChange={this.handleChange}
                 />
-                <span className="ml-2 text-white">Host</span>
+                <span className="ml-2 text-white">Store</span>
               </label>
               <label className="inline-flex items-center ml-6">
                 <input
@@ -155,7 +156,7 @@ class Register extends React.Component<{ history: any, t: any }, IAccountInfoSta
                   value="ServiceProvider"
                   onChange={this.handleChange}
                 />
-                <span className="ml-2 text-white">Service Provider</span>
+                <span className="ml-2 text-white">Transporter</span>
               </label>
             </div>
             <button
@@ -179,8 +180,10 @@ class Register extends React.Component<{ history: any, t: any }, IAccountInfoSta
               >
                 <img
                   className="w-12 h-12 mx-auto"
-                  src="../assets/google.png"
+                  src={googleLogo}
                   alt="Sign in with Google"
+                  height={"12px"}
+                  width={"12px"}
                 />
               </button>
             )}
@@ -200,5 +203,4 @@ class Register extends React.Component<{ history: any, t: any }, IAccountInfoSta
     );
   }
 }
-
 export default withTranslation()(Register);

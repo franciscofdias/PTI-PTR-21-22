@@ -17,23 +17,23 @@ i18n
   .use(LanguageDetector) // detect user language
   .use(initReactI18next) // pass the i18n instance to react-i18next.
   .init({
-    resources:fallbackLng, // fallback language is portuguese.
+    resources,
+    fallbackLng:"pt"}) // fallback language is portuguese.
 
-    detection: {
-      checkWhitelist: true, // options for language detection
-    },
+   // detection: {
+   //   checkWhitelist: true, // options for language detection
+   // },
 
-    debug: true,
+   // debug: true,
 
-    whitelist: availableLanguages,
+   // whitelist: availableLanguages,
 
-    interpolation: {
-      escapeValue: false, // no need for react. it escapes by default
-    },
-    react: {
-      useSuspense: false
-    }
-      
-  });
+   // interpolation: {
+   //   escapeValue: false, // no need for react. it escapes by default
+   // },
+   // react: {
+   //   useSuspense: false
+   // }
+      ;
 
 export default i18n;
