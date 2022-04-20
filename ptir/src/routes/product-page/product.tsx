@@ -64,14 +64,22 @@ function Product(props: any) {
         )
     }
 
+    /*
+    cadeia logística
+    - adicionar varios fornecedores para o mesmo produto, com a variavel qual é a mais ecologica
+    -mais ecológicas:
+    
+    • Os recursos consumidos, como matérias primas e energia. Alguns exemplos são
+    a água usada no setor agrícola, a eletricidade gasta em refrigeração, ou o combustível necessário aos transportes.
+
+    • A poluição do ambiente, que pode estar diretamente relacionada com o consumo
+    de recursos, como nos combustíveis, mas noutros, como a eletricidade, devem
+    ser usados dados sobre a percentagem de fontes renováveis e não renováveis.
+    */
     function impactEnv(com: any) {
         const commodities = []
         for (const value of com) {
-            if (value === "recursos") {commodities.push(<BiWifi className="inline" title="Wi-fi"/>)}
-            if (value === "poluição") {commodities.push(<IoSnowOutline className="inline" title="Air Conditioner"/>)}
-            if (value === "heater") {commodities.push(<RiTempHotLine className="inline" title="Heater"/>)}
-            if (value === "dishWasher") {commodities.push(<GiForkKnifeSpoon className="inline" title="Dish Washer"/>)}
-            if (value === "washingMachine") {commodities.push(<CgSmartHomeWashMachine className="inline" title="Washing Machine"/>)}
+
         }
         return (
             commodities
@@ -164,23 +172,14 @@ function Product(props: any) {
                                     {props.location.state.productType}, host by {props.location.state.companyName}
                                 </p>
 
-                                <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-1">
-                                    {props.location.state.numRooms} <IoBedOutline className={"inline"} />   {props.location.state.numBathrooms} <BiBath className={"inline"} />
-                                </p>
-
                                 <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold mt-1">Price</p>
+                                <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-1">{props.location.state.price}€</p>
 
                                 <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold mt-1">Impact on the environment</p>
                                 <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-1">
                                     {impactEnv(props.location.state.commodities)}
                                 </p>
 
-                                <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold mt-1">Close services</p>
-                                <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-1">bla bla bla</p>
-
-                                <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold mt-1">People</p>
-                                <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl mt-1">{props.location.state.people} <BsPeople className="inline"/></p>
-                            
                                 <p className="text-base xs:text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-semibold mt-1">Rating</p>
                                 <div className="text-base xs:text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs mt-1">
                                     {rating(props.location.state.rating)}
