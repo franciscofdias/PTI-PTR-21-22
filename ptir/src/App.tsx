@@ -11,7 +11,7 @@ import Product from './routes/product-page/product.tsx';
 import AuthenticatedRoute from './components/Authenticated-Route/Authenticated-Route.tsx';
 import UnauthenticatedRoute from './components/Unauthenticated-Route/Unauthenticated-Route.tsx';
 //import NotFound from './routes/notFound-page/notFound';
-//import CreateProduct from './routes/createProduct-page/createProduct';
+import CreateProduct from './routes/createProduct-page/createProduct';
 //import Admin from './routes/admin-page/admin'
 
 class App extends React.Component<{}>{
@@ -23,7 +23,13 @@ class App extends React.Component<{}>{
           <Route path='/register' element={<Register />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/product' element={<Product/>}/>
-          <UnauthenticatedRoute path='/register' exact>
+        </Routes>
+      </Router>
+    );
+  }
+}
+/*
+<UnauthenticatedRoute path='/register' exact>
             <Register/>
           </UnauthenticatedRoute>
           <UnauthenticatedRoute path='/login' exact>
@@ -32,10 +38,6 @@ class App extends React.Component<{}>{
           <AuthenticatedRoute path='/profile' exact>
             <Profile/>
           </AuthenticatedRoute>
-        </Routes>
-      </Router>
-    );
-  }
-}
+*/
 
 export default App;
