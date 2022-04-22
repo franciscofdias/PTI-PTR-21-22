@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./product.css";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar.tsx";
 import SearchBar from "../../assets/svgs/search.svg";
-import HousePicsSwiper from "../../components/HousePicsSwiper/ProductPicsSwiper";
-import FavPopup from "../../components/FavPopup/FavPopup";
-import Footer from "../../components/Footer/Footer";
-import moment from 'moment';
-import { DateRangePicker } from "react-dates";
+import HousePicsSwiper from "../../components/ProductPicsSwiper/ProductPicsSwiper.tsx";
+import FavPopup from "../../components/FavPopup/FavPopup.tsx";
+import Footer from "../../components/Footer/Footer.tsx";
+
 
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 import { BsBookmarkFill, BsBookmarkPlus, BsPeople } from "react-icons/bs";
@@ -116,22 +115,7 @@ function Product(props: any) {
         //meter a data e a hora da entrega
         var newDate = (new Date()).toLocaleDateString("ko-KR").split("-").toString();
         
-        if (moment(dateAvailable).isBefore(newDate)){
-            dateAvailable = newDate;
-        }
 
-        return(
-            <DateRangePicker
-                //mudar
-                startDate={moment(dateAvailable)} // momentPropTypes.momentObj or null,
-                startDateId="starterDate" // PropTypes.string.isRequired,
-                endDate={null} // momentPropTypes.momentObj or null,
-                endDateId="endDate" // PropTypes.string.isRequired,
-                onDatesChange={({ startDate, endDate }) => setDateAvailable({ startDate, endDate })} // PropTypes.func.isRequired,
-                focusedInput={null} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                onFocusChange={focusedInput => setFocused({ focusedInput })} // PropTypes.func.isRequired,
-            />
-        )
         
     }
 

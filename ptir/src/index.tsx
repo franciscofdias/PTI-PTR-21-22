@@ -1,22 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.tsx';
 import reportWebVitals from './reportWebVitals.ts';
 import './i18nextConf.ts';
 import { CookiesProvider } from "react-cookie";
 
-const container =  document.getElementById('app') as HTMLIFrameElement
 
-const root = ReactDOM.createRoot(container);
-
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <CookiesProvider>
       <App />
     </CookiesProvider>
-
   </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

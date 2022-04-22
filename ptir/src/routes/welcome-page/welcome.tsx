@@ -1,6 +1,6 @@
 import React from "react";
 import "./welcome.css";
-import serchicon from "../../assets/svgs/search.svg"
+import serchicon from "../../assets/svgs/search.svg";
 import Navbar from "../../components/Navbar/Navbar.tsx";
 import { withTranslation } from "react-i18next";
 

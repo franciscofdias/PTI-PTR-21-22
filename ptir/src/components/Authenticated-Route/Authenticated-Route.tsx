@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect, Route, useLocation } from "react-router-dom";
+import { Navigate, Route, useLocation } from "react-router-dom";
 import isAuthenticated from "../../_services/Authenticator";
 import { Cookies } from 'react-cookie';
 
@@ -22,7 +22,7 @@ export default function AuthenticatedRoute({ children, ...rest }: IProps) {
       {isAuthBool ? (
         children
       ) : (
-        <Redirect to={`/login?redirect=${pathname}${search}`} />
+        <Navigate to={`/login?navigate=${pathname}${search}`} />
       )}
     </Route>
   );
