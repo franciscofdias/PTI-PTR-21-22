@@ -23,13 +23,9 @@ class App extends React.Component<{}>{
           <Route path='/register' element={<Register />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/product' element={<Product/>}/>
-        </Routes>
-      </Router>
-    );
-  }
-}
-/*
-<UnauthenticatedRoute path='/register' exact>
+          <Route path='/createProduct' element={<CreateProduct/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <UnauthenticatedRoute path='/register' exact>
             <Register/>
           </UnauthenticatedRoute>
           <UnauthenticatedRoute path='/login' exact>
@@ -38,6 +34,11 @@ class App extends React.Component<{}>{
           <AuthenticatedRoute path='/profile' exact>
             <Profile/>
           </AuthenticatedRoute>
-*/
+        </Routes>
+      </Router>
+    );
+  }
+}
+
 
 export default App;
