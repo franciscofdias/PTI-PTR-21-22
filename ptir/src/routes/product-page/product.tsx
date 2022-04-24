@@ -11,11 +11,6 @@ import Footer from "../../components/Footer/Footer.tsx";
 
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 import { BsBookmarkFill, BsBookmarkPlus, BsPeople } from "react-icons/bs";
-import { IoBedOutline, IoSnowOutline } from "react-icons/io5";
-import { BiBath, BiWifi} from "react-icons/bi";
-import { CgSmartHomeWashMachine } from "react-icons/cg";
-import { RiTempHotLine } from "react-icons/ri";
-import { GiForkKnifeSpoon } from "react-icons/gi";
 import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 
 function Product(props: any) {

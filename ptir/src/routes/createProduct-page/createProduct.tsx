@@ -12,5 +12,8 @@ type OptionType = {
     value: any;
 }
 /*EDITAR*/
-//export default function createProduct()[]
+
+export default function createProduct() {
+    
+}
 
