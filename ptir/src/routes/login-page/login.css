@@ -2,3 +2,11 @@ img{
     height: "14px";
     width: "14px";
 }
+
+body {
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }

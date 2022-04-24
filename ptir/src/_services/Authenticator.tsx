@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCookies, Cookies } from 'react-cookie';
-import { CheckToken } from './api';
+import { CheckToken } from './api.ts';
 
 export default function IsAuthenticated () {
     const [, setCookie, removeCookie] = useCookies(['cookie-name'])
