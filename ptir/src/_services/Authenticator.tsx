@@ -8,6 +8,7 @@ export default function IsAuthenticated () {
     // check if cookie exists
     console.log(cookies.get('authenticated'))
     CheckToken().then(res => {
+        setCookie("lastChecked", Date.now())
         setCookie("authenticated", true)
         setCookie("accountType", res.data.accountType)
     })

@@ -183,13 +183,6 @@ export default function Navbar () {
               <div className="flex-shrink-0 flex items-center">
                 <Link to="/">
                   <img
-                    className="block lg:hidden h-12 w-auto"
-                    src="https://cdn4.iconfinder.com/data/icons/circular-economy-aesthetics-vol-1/256/Green_Economy-512.png"
-                    alt="Logo"
-                  />
-                </Link>
-                <Link to="/">
-                  <img
                     className="hidden lg:block h-20 w-auto"
                     src="https://cdn4.iconfinder.com/data/icons/circular-economy-aesthetics-vol-1/256/Green_Economy-512.png"
                     alt="Logo"
