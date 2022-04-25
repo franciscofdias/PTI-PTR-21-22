@@ -14,6 +14,5 @@ type OptionType = {
 /*EDITAR*/
 
 export default function createProduct() {
-    
-}
 
+}
