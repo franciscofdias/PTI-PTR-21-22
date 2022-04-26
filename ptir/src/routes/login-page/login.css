@@ -1,12 +1,8 @@
-img{
-    height: "14px";
-    width: "14px";
+.loginPage {
+    min-height: 100vh;
+    height: 100%;
 }
 
-body {
-    background-color: #282c34;
-    color: white;
-    padding: 40px;
-    font-family: Arial;
-    text-align: center;
-  }
+#rememberMeBtn, #rememberMeBtn:active, #rememberMeBtn:focus{
+    box-shadow: none;
+}

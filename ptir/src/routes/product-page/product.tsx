@@ -4,13 +4,11 @@ import { useTranslation } from "react-i18next";
 import "./product.css";
 import Navbar from "../../components/Navbar/Navbar.tsx";
 import SearchBar from "../../assets/svgs/search.svg";
-import HousePicsSwiper from "../../components/ProductPicsSwiper/ProductPicsSwiper.tsx";
+import ProductPicsSwiper from "../../components/ProductPicsSwiper/ProductPicsSwiper.tsx";
 import FavPopup from "../../components/FavPopup/FavPopup.tsx";
 import Footer from "../../components/Footer/Footer.tsx";
 
 
-import { HiHeart, HiOutlineHeart } from "react-icons/hi";
-import { BsBookmarkFill, BsBookmarkPlus, BsPeople } from "react-icons/bs";
 import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 
 function Product(props: any) {
@@ -19,9 +17,7 @@ function Product(props: any) {
     const [interest, setInterest] = useState(false);
     const [seen, setSeen] = useState(false);
     const [dots, setDots] = useState(true);
-    const [dateAvailable, setDateAvailable] = useState({});
     const [focused, setFocused] = useState({});
-    // fazer state true false para calender
 
     var imagem = "https://picsum.photos/600/400/?random";
 
@@ -71,12 +67,12 @@ function Product(props: any) {
     ser usados dados sobre a percentagem de fontes renováveis e não renováveis.
     */
     function impactEnv(com: any) {
-        const commodities = []
+        const impactEnv = []
         for (const value of com) {
 
         }
         return (
-            commodities
+            impactEnv
         )
     }
     /*
@@ -106,24 +102,15 @@ function Product(props: any) {
     }
 
 
-    function showToggleDatePicker(dateAvailable: string){
-        //meter a data e a hora da entrega
-        var newDate = (new Date()).toLocaleDateString("ko-KR").split("-").toString();
-        
-
-        
-    }
-
     
     return (
         <div>
             <Navbar />
             <div className="container mt-5 mb-2 mx-auto w-3/4">
                 <article className="overflow-hidden rounded-lg shadow-lg">
-                    <HousePicsSwiper pics={listOfImages} />
+                    <ProductPicsSwiper pics={listOfImages} />
                     <div className="float-right mt-3 mr-2" >
-                        <button className="w-6 h-auto focus:ring-0 focus:outline-none" onClick={() => setInterest(!interest)}>{interest ? <BsBookmarkFill size={24} color={'#F9C2A7'} /> : <BsBookmarkPlus size={24} />}</button>
-                        <button className="w-6 h-auto ml-3 mr-4 focus:ring-0 focus:outline-none" onClick={() => { setFavourite(!favourite); (favourite ? setSeen(seen) : setSeen(!seen)); }}>{favourite ? <HiHeart size={24} color={'#EA5455'} /> : <HiOutlineHeart size={24} />}</button>
+                        <button className="w-6 h-auto ml-3 mr-4 focus:ring-0 focus:outline-none" onClick={() => { setFavourite(!favourite); (favourite ? setSeen(seen) : setSeen(!seen)); }}></button>
                         {favourite ? (seen ? <FavPopup toggle={() => setSeen(!seen)} lists={props.location.state.lists} /> : null)
                             : null
                         }
@@ -178,8 +165,7 @@ function Product(props: any) {
                         </div>
                     </div>
                     <footer>
-                        <button onClick={() => showToggleDatePicker(props.location.state.availableDate)}className="bookBtn items-center float-left font-semibold ml-4" type="button">Choose Dates</button>
-                        <button className="bookBtn items-center float-left font-semibold ml-4" type="button">Book</button>
+                        <button className="bookBtn items-center float-left font-semibold ml-4" type="button">Buy</button>
                     </footer>
                 </article>
             </div>
