@@ -58,22 +58,22 @@ class Profile extends React.Component<{t: any}, IProfileState>{
             <h1 className="text-gray-900 text-xl font-semibold group-hover:text-white m-3">{t("profileInfo")}</h1>
             <div>
               <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3 ">{t("fullName")}: </p>
-              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Blabla </p>
+              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Ola </p>
               <button className="editBtn mb-5 inline" type="button" >{t("edit")}</button>
             </div>
             <div>
               <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3 ">{t("birthday")}: </p>
-              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Blabla </p>
+              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Ola2 </p>
               <button className="editBtn mb-5 inline" type="button" >{t("edit")}</button>
             </div>
             <div>
               <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3 ">{t("phoneNum")}: </p>
-              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Blabla </p>
+              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Ola3 </p>
               <button className="editBtn mb-5 inline" type="button" >{t("edit")}</button>
             </div>
             <div>
               <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3 ">{t("cardNum")}: </p>
-              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Blabla </p>
+              <p className="text-gray-500 font-medium group-hover:text-white group-hover:text-opacity-75 mb-5 inline mx-3">Ola4 </p>
               <button className="editBtn mb-5 inline" type="button" >{t("edit")}</button>
             </div>
             <div>

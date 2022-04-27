@@ -5,12 +5,14 @@ import App from './App.tsx';
 import reportWebVitals from './reportWebVitals.ts';
 import './i18nextConf.ts';
 import { CookiesProvider } from "react-cookie";
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <CookiesProvider>
       <App />
+      <ToastContainer />
     </CookiesProvider>
   </React.StrictMode>
 );

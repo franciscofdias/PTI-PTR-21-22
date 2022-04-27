@@ -7,16 +7,16 @@ import Footer from "../../components/Footer/Footer.tsx";
 import EmptyProfilePic from "../../assets/blank-profile-picture.png";
 import { ImCamera } from "react-icons/im";
 import { Controller, useForm, useFormState } from "react-hook-form";
-import { UpdateUser } from "../../_services/api";
+import { UpdateUser } from "../../_services/api.ts";
 import { toast, ToastContainer } from "react-toastify";
 import { Cookies } from "react-cookie";
 import moment from "moment";
-import { useHistory } from "react-router-dom";
+import { useNavigate  } from "react-router-dom";
 
 export default function CompleteRegister() {
     const { t } = useTranslation();
     const cookies = new Cookies();
-    const history = useHistory();
+    const history = useNavigate ();
 
     const {
         register,
@@ -145,7 +145,7 @@ export default function CompleteRegister() {
                             </label>
                             <br />
                             <input
-                                className="w-full md:w-9/12 border-none rounded-xl shadow-marta my-4 focus:ring-0"
+                                className="w-full md:w-9/12 border-none rounded-xl my-4 focus:ring-0"
                                 type="text"
                                 placeholder={t("name")}
                                 {...register("name", {
@@ -183,7 +183,7 @@ export default function CompleteRegister() {
                                 }}
                                 render={({ field: { onChange, value } }) => (
                                     <DatePicker
-                                        className="w-full md:w-9/12 border-none rounded-xl shadow-marta bg-white px-3 py-2 my-4"
+                                        className="w-full md:w-9/12 border-none rounded-xl bg-white px-3 py-2 my-4"
                                         value={value}
                                         onChange={onChange}
                                         locale={calendarLocale}
@@ -257,7 +257,7 @@ export default function CompleteRegister() {
                             </label>
                             <br />
                             <input
-                                className="w-full md:w-9/12 border-none rounded-xl shadow-marta my-4 focus:ring-0"
+                                className="w-full md:w-9/12 border-none rounded-xl my-4 focus:ring-0"
                                 type="number"
                                 placeholder={t("phone")}
                                 {...register("phone", {
@@ -293,7 +293,7 @@ export default function CompleteRegister() {
                                     <input
                                         type="radio"
                                         className="form-radio text-dark_blue focus:ring-0"
-                                        value="Student"
+                                        value="Consumer"
                                         {...register("accountType", {
                                             required: {
                                                 value: true,
@@ -303,7 +303,7 @@ export default function CompleteRegister() {
                                         })}
                                     />
                                     <span className="ml-2 text-dark_blue font-bold">
-                                        {t("student")}
+                                        {t("Consumer")}
                                     </span>
                                 </label>
                                 <br />
@@ -311,7 +311,7 @@ export default function CompleteRegister() {
                                     <input
                                         type="radio"
                                         className="form-radio text-dark_blue focus:ring-0"
-                                        value="Host"
+                                        value="Transporter"
                                         {...register("accountType", {
                                             required: {
                                                 value: true,
@@ -321,7 +321,7 @@ export default function CompleteRegister() {
                                         })}
                                     />
                                     <span className="ml-2 text-dark_blue font-bold">
-                                        {t("host")}
+                                        {t("Transporter")}
                                     </span>
                                 </label>
                                 <br />
@@ -329,7 +329,7 @@ export default function CompleteRegister() {
                                     <input
                                         type="radio"
                                         className="form-radio text-dark_blue focus:ring-0"
-                                        value="ServiceProvider"
+                                        value="Provider"
                                         {...register("accountType", {
                                             required: {
                                                 value: true,
@@ -339,7 +339,7 @@ export default function CompleteRegister() {
                                         })}
                                     />
                                     <span className="ml-2 text-dark_blue font-bold">
-                                        {t("serviceProvider")}
+                                        {t("Provider")}
                                     </span>
                                 </label>
                                 <p className="hidden">
@@ -359,7 +359,7 @@ export default function CompleteRegister() {
                             </label>
                             <br />
                             <input
-                                className="w-full md:w-9/12 border-none rounded-xl shadow-marta mt-4 focus:ring-0"
+                                className="w-full md:w-9/12 border-none rounded-xl mt-4 focus:ring-0"
                                 type="text"
                                 placeholder={t("cardNum")}
                                 {...register("bankAccount", {
@@ -370,7 +370,7 @@ export default function CompleteRegister() {
                         </div>
                         <div className="flex-1 flex justify-center items-end">
                             <button
-                                className="items-center text-xl font-semibold w-3/5 shadow-marta focus:outline-none bg-beige_a_morrer py-2 px-3 rounded-xl hover:bg-dark_blue hover:text-white mt-16 md:mt-0"
+                                className="items-center text-xl font-semibold w-3/5 focus:outline-none bg-beige_a_morrer py-2 px-3 rounded-xl hover:bg-dark_blue hover:text-white mt-16 md:mt-0"
                                 type="submit"
                             >
                                 {t("complete")}
